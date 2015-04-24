@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  background: #eff0f1;
-}
-
 .container {
   width: 25em;
   margin: 0 auto 3em auto;
