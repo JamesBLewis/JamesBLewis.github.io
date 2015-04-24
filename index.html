@@ -38,6 +38,20 @@ body {
   background-image: url("background-photo.jpg");
   background-position: top center;
   background-size: cover;
+  -webkit-box-shadow:
+            inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+
+     -moz-box-shadow:
+            inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+
+          box-shadow:
+            inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -46,6 +60,7 @@ body {
   vertical-align: middle;
   text-align: center;
 }
+
 
 h1 {
   color: #efecec;
@@ -68,7 +83,6 @@ strong {
 }
 
 #footer {
-	background:#ffab62;
 	width:100%;
 	height:100px;
 	position:absolute;
@@ -93,7 +107,7 @@ strong {
   <header class="container">
     <section class="content">
       <h1>Something big is coming!</h1>
-      <p class="sub-title"><strong>James' Website</strong> <br />Prepare to be amazed about how much better it is then chrislewis.com.au</p>
+      <p class="sub-title"><strong>James' Website</strong> <br />Prepare to be amazed about how much<br />better it is then chrislewis.com.au</p>
     </section>
   </header>
   <div class='row'><i id='fb' class='icon-facebook'></i><i class='icon-twitter' id='tw'></i><i class='icon-googleplus' id='gp' ></i><i class='icon-pinterest' id='pt' ></i></div>
@@ -116,7 +130,7 @@ $('#pt').click(function() {
 } );
 </script>
 <div id="footer">
-
+  <li>Made By James Lewis.</li><li>Backround by Cindy Harris.</li>
 </div><!-- #footer -->
 </body>
 
