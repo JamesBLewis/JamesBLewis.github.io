@@ -90,6 +90,10 @@
 .fa fa-arrow-right fa-1x{
 
 }
+/* Computer */
+
+
+
 	/* Backgrounds will cover all the section
 	* --------------------------------------- */
 	#section1,
@@ -147,7 +151,8 @@
 	}
 
 	#section2 h1{
-		font-family: Komoda; font-weight: bold;
+		/*font-family: Media Gothic; font-weight: bold;*/
+		font-family: Komoda,Komoda; font-weight: bold;
 	}
 
 	#rule{
@@ -182,8 +187,65 @@
 	#infoMenu li a{
 			color: #fff;
 	}
+article {
+  padding:8em;
+}
+img {
+  width:500px;
+}
+.monitor {
+	background: #5337A5 linear-gradient(-75deg, #5337A5 72.2%, rgba(white,0.25) 72.2%);
+  width:515px;
+  height: 300px;
+  overflow-y:scroll;
+  border: solid 1em #333;
+  border-radius:.5em;
+}
+.monitor::-webkit-scrollbar {
+      width: 15px;
+}
+.monitor::-webkit-scrollbar-thumb {
+  background: #666;
+}
+::-webkit-scrollbar-track {
+      background-color: #888;
+}
+.stand:before {
+  content:"";
+  display:block;
+  position:relative;
+  background: #222;
+  width: 50px;
+  height: 68px;
+  top:400px;
+  left:0px;
+	right:0px;
+}
+.stand:after {
+   content:"";
+   display:block;
+   position:relative;
+   background:#333;
+   border-top-left-radius:.5em;
+   border-top-right-radius:.5em;
+   width: 250px;
+   height: 15px;
+   top: 68px;
+   left: 0px;
+	 right: 0px;
+}
 
-    </style>
+.desk {
+	position: relative;
+	background: #4963eb;
+	height: 30px;
+	width: 600px;
+	margin: 68px 0 0 0;
+	box-shadow: 6px 6px 15px 0 #5767ba;
+}
+
+
+  </style>
 
 </head>
 <body>
@@ -212,13 +274,22 @@
 	    <div class="section" id="section2">
 	    	<div class="intro">
 	    		<h1>About Me</h1>
-	    		<p>Show it in full screen!</p>
-
 	    	</div>
+				<article>
+					<center>
+    		<div class="stand">
+        		<div class="monitor">
+            	<img src="imgs/computer-screen.jpg">
+        		</div>
+    		</div>
+			<div class="desk"></div>
+			</center>
+		<article>
+				<!--
 				<a href=""><div id="about1" style="top: 280px;"><h1>Who I Am<i class="fa fa-arrow-right fa-1x"></i></h1></div></a>
 				<a href=""><div id="about1"><h1>What I Actually Do<i id="rule" class="fa fa-arrow-right fa-1x"></i></h1></div></a>
 				<a href=""><div id="about1" style="bottom: 130px;"><h1>My Work<i class="fa fa-arrow-right fa-1x"></i></h1></div></a>
-
+				-->
 				<svg class="arrow">
 						<path class="a1" d="M0 0 L30 32 L60 0"></path>
 						<path class="a2" d="M0 20 L30 52 L60 20"></path>
