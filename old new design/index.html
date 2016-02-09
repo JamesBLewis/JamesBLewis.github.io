@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>James Lewis Website</title>
+	<meta name="author" content="James Lewis" />
+	<meta name="description" content="James Lewis' new website where you can find out everything about me" />
+	<meta name="keywords" content="James Lewis melbourne australia" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3'],
+	    		navigation: {
+		            'textColor': '#f2f2f2',
+		            'bulletsColor': '#ccc',
+		            'position': 'right',
+		            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+		        }
+			});
+	    });
+    </script>
+
+    <style>
+
+@font-face { font-family: Komoda; font-weight: bold; src: url('fonts/Komoda.otf');}
+@font-face { font-family: Media Gothic; font-weight: bold; src: url('fonts/Md_Gothic11.otf');}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+
+	.section{
+		text-align:center;
+	}
+
+	.arrow {
+	width: 60px;
+	height: 82px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+/* sets arrow style */
+.arrow path {
+	stroke: #0099FF;
+	fill: transparent;
+	stroke-width: 3px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow{
+0% {opacity:0}
+25% {opacity:1}
+75% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow{
+0% {opacity:0}
+25% {opacity:1}
+75% {opacity:0}
+100% {opacity:0}
+}
+
+.arrow path.a1{
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s;
+}
+
+.arrow path.a2{
+	animation-delay:-.5s;
+	-webkit-animation-delay:-.5s;
+}
+
+.arrow path.a3{
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+.fa fa-arrow-right fa-1x{
+
+}
+/* Computer */
+
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+	#section3{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section1{
+		background-image: url(imgs/bg1.jpg);
+	}
+	#section2{
+		background: rgba(73,155,234,1);
+		background: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+		background: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+	}
+
+	#section3{
+		background-image: url(imgs/bg3.jpg);
+		padding: 6% 0 0 0;
+	}
+
+	#section3 h1{
+		color: #000;
+	}
+
+	#section1 h1{
+				font-family: Komoda,Komoda; font-weight: bold;
+				position: absolute;
+				font-size: 1000%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				top: 30px;
+				color: #fff;
+				line-height: 200px;
+				margin-top: -100px;
+				top: 50%;
+				width: 100%;
+	}
+
+	#section2 .intro{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+	}
+
+	#section2 h1{
+		/*font-family: Media Gothic; font-weight: bold;*/
+		font-family: Komoda,Komoda; font-weight: bold;
+	}
+
+	#rule{
+		position: relative;
+		border-left: thick solid #ff0000;
+		text-align: right;
+	}
+
+	#about1 {
+			position: absolute;
+	    border-radius: 25px;
+	    background: #8AC007;
+	    padding: 10px;
+	    width: 700px;
+	    height: auto;
+			left: 0;
+			right: 800px;
+			margin: 0 auto;
+			text-align: left;
+	    transition: background 0.5s ease-in-out;
+	}
+
+
+	#about1:hover {
+	    background: green;
+
+	}
+
+	#section3 h1,
+
+
+	#infoMenu li a{
+			color: #fff;
+	}
+article {
+  padding:8em;
+}
+img {
+  width:500px;
+}
+.screen {
+ width: 300px;
+ height: 200px;
+ background: #5337A5 linear-gradient(-75deg, #5337A5 72.2%, rgba(white,0.25) 72.2%);
+ position: absolute;
+ left: 0;
+ right: 0;
+}
+.monitor {
+
+  width:515px;
+  height: 300px;
+  overflow-y:scroll;
+  border: solid 1em #333;
+  border-radius:.5em;
+}
+.monitor::-webkit-scrollbar {
+      width: 15px;
+}
+.monitor::-webkit-scrollbar-thumb {
+  background: #666;
+}
+::-webkit-scrollbar-track {
+      background-color: #888;
+}
+.stand:before {
+  content:"";
+  display:block;
+  position:relative;
+  background: #222;
+  width: 50px;
+  height: 68px;
+  top:400px;
+  left:0px;
+	right:0px;
+}
+.stand:after {
+   content:"";
+   display:block;
+   position:relative;
+   background:#333;
+   border-top-left-radius:.5em;
+   border-top-right-radius:.5em;
+   width: 250px;
+   height: 15px;
+   top: 68px;
+   left: 0px;
+	 right: 0px;
+}
+
+.desk {
+	 display:block;
+	position: relative;
+	background: #4963eb;
+	height: 30px;
+	width: 650px;
+	margin: 68px 0px 0px 0px;
+	box-shadow: 6px 6px 15px 0 #5767ba;
+	left: 0px;
+	right: 0px;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
+		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+	</ul>
+
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+	    	<h1><span style=
+					"display:inline-block;
+					border-width:10px;
+					border-style:dashed;
+					padding: 15px;
+					border:5px solid #00000;"
+					>James' Website</span></h1>
+					<svg class="arrow">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+			</div>
+	    <div class="section" id="section2">
+	    	<div class="intro">
+	    		<h1>About Me</h1>
+	    	</div>
+				<article>
+					<center>
+    		<div class="stand">
+        		<div class="monitor">
+            	<img src="imgs/computer-screen.jpg">
+        		</div>
+    		</div>
+					<div class="desk"></div>
+			</center>
+		<article>
+				<!--
+				<a href=""><div id="about1" style="top: 280px;"><h1>Who I Am<i class="fa fa-arrow-right fa-1x"></i></h1></div></a>
+				<a href=""><div id="about1"><h1>What I Actually Do<i id="rule" class="fa fa-arrow-right fa-1x"></i></h1></div></a>
+				<a href=""><div id="about1" style="bottom: 130px;"><h1>My Work<i class="fa fa-arrow-right fa-1x"></i></h1></div></a>
+				-->
+				<svg class="arrow">
+						<path class="a1" d="M0 0 L30 32 L60 0"></path>
+						<path class="a2" d="M0 20 L30 52 L60 20"></path>
+						<path class="a3" d="M0 40 L30 72 L60 40"></path>
+					</svg>
+			</div>
+	    <div class="section" id="section3">
+	    	<div class="intro">
+	    		<h1>Just terrific!</h1>
+	    		<p>Use the power of images</p>
+	    	</div>
+	    </div>
+	</div>
+
+</body>
+</html>
