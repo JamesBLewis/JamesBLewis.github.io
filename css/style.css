@@ -3,7 +3,14 @@
 body,html {
   height: 100%;
 }
-
+body{
+background-color: #ffffff;
+background: url("http://www.transparenttextures.com/patterns/dust.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/*	background-color: #ffffff;
+background-image: url("http://www.transparenttextures.com/patterns/dust.png");
+This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
 h2 {
 	/*font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;*/
   font-family: 'Open Sans', sans-serif;
@@ -70,6 +77,7 @@ margin-bottom: 0;
 	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #ffffff;
   background-image: url("http://www.transparenttextures.com/patterns/notebook-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -105,3 +113,45 @@ margin-bottom: 0;
 	-o-transform: skew(5deg) rotate(5deg);
 	transform: skew(5deg) rotate(5deg);
 }
+
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+  float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+  display: block;
+
+  }
+  .sidebar-nav .navbar li {
+  float: none;
+  display: block;
+  }
+  .sidebar-nav .navbar li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  }
+}
+@media (min-width: 768px) {
+  /* uncomment if you would like the menu to be fixed */
+  /* .navbar {
+    position: fixed;
+    width: 170px;
+    z-index: 2;
+  } */
+}
+@media (min-width: 992px) {
+  .navbar {
+    width: 212px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    width: 262px;
+  }
+}
+.sidebar-nav .navbar-header{ float: none; }
