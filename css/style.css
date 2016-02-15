@@ -3,14 +3,7 @@
 body,html {
   height: 100%;
 }
-body{
-background-color: #ffffff;
-background: url("http://www.transparenttextures.com/patterns/dust.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-/*	background-color: #ffffff;
-background-image: url("http://www.transparenttextures.com/patterns/concrete-wall.png");
-This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
+
 h2 {
 	/*font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;*/
   font-family: 'Open Sans', sans-serif;
