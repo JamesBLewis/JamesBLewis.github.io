@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@media screen and (max-width: 767px) {
+  #container-main {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+}
 body,html {
   height: 100%;
 }
@@ -104,4 +111,9 @@ margin-bottom: 0;
 	-ms-transform: skew(5deg) rotate(5deg);
 	-o-transform: skew(5deg) rotate(5deg);
 	transform: skew(5deg) rotate(5deg);
+}
+
+.container {
+ padding-left: 80px;
+
 }
