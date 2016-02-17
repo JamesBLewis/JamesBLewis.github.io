@@ -133,3 +133,10 @@ margin-bottom: 0;
  padding-left: 80px;
 
 }
+
+.headline-link{
+
+  border: none;
+  border-left: solid;
+  border-color: #0400cf;
+}
