@@ -8,15 +8,17 @@
 	<meta name="author" content="James Lewis">
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/landing-style.css">
-	<link rel="stylesheet" type="text/css" href="css/landing-style.css">
+
 	<script src="bootstrap-3.3.6-dist/js/jquery.min.js"></script>
   <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	<script src="js/typed.js"></script>
 <script>
 	$(function(){
 		$(".element").typed({
-			strings: ["First sentence.", "Second sentence."],
-			typeSpeed: 0
+			strings: ["Hi. My name is James.", "This is my website :)"],
+			typeSpeed: 0,
+			cursorChar: "_",
+			backDelay: 1000
 		});
 	});
 </script>
@@ -33,7 +35,7 @@
 </head>
 <body>
   <div class="container" id="container-main">
-		<center><span class="element"></span></center>
+		<span class="element"></span>
   </div>
 </body>
 </html>
