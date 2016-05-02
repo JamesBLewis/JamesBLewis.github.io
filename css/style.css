@@ -27,6 +27,10 @@ background-image: url("http://www.transparenttextures.com/patterns/concrete-wall
 This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+h1{
+  padding-top: 29.5px;
+}
+
 h2 {
 	/*font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;*/
   font-family: 'Open Sans', sans-serif;
