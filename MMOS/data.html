@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MMOS</title>
+    <meta name="description" content="Landing page for my informatics multimodal online solution for navigation">
+   <link rel="stylesheet" href="../css/reset.css">
+   <link href="../bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/style.scss">
+    <!--[if lt IE 9]>
+      <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+ <body>
+   <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+       <div class="container">
+       <a style="color: #FF3B3F" class="navbar-brand" href="#">MMOS</a>
+       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+           <li class="nav-item ">
+             <a class="nav-link" href="index.html">Home</a>
+           </li>
+           <li class="nav-item active">
+             <a class="nav-link" href="data.html">Data<span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="key-findings.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Key Findings
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Another action</a>
+               <a class="dropdown-item" href="#">Something else here</a>
+             </div>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">conclusion</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+   <div class="container content exp hheadings">
+     <h2>How was the Data collected?</h2>
+     <p>Data was collected from primary and secondary sources. Primary data was collected through questions on a Google forms survey. This survey was then posted on a variety of Australian Facebook and Reddit groups as well as given to my classmates and house. People then clicked on it and filled it out. The results of this survey were automatically added to a spreadsheet. The questions had built in validation and some requirements. Time stamps are recorded on all collected data to make sure it is accurate.</p>
+     <span href="#" id="types"><h3><i class="fa fa-angle-right" aria-hidden="true"></i>Types of data collected</h3></span>
+     <div class="types">
+       <p>The survey gave a variety qualitative and quantitative data. Questions involved open text responses, closed word responses, scale numerical responses(answer from x-x) and numerical responses. All of which can be found in the question tables under survey questions.</p>
+     </div>
+     <span href="#" id="legal"><h3><i class="fa fa-angle-right" aria-hidden="true"></i>Legal Obligations</h3></span>
+     <div class="legal">
+       <p>All Primary data was collected anonymously and all data utilised was collected adhering to the Privacy Act of 1988, Privacy and data protection act 2014, copyright act 1968 and spam act 2003. No IP addresses or identifiable information was recorded and uses consented to a privacy statement before filling out the survey. Their data was not shared with anyone but myself and to an extent Google. The information collected was also always stored on an encrypted device in secure locations. Users explicitly gave permission for the information they enter to be published as well. I also reference all secondary data used<br /><br />They agreed to the following:</p>
+       <ul>
+         <li>You also agree to Google's Terms of use found below.</li>
+         <li>You voluntarily agree to participate.</li>
+         <li>You agree to have non-identifiable information you enter published.</li>
+       </ul>
+    </div>
+     <h2>Survey Summary<h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScI2bjS4ajpf6cibl4Wa00GNq3tnwWJ73qOxBj93e3zBaGY-A/viewform?embedded=true" width="100%" height="625" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <h2>Secondary Data</h2>
+    <p>Secondary data was sourced from 5 separate studies conducted by notable organisations. Each report contributes a variety of quantitative and qualitative data about the habits and general trends of adolescent piracy. Please note the sources for this data are hosted on this domain to ensure that all links work. I do not own or are affilated in any way with these reports.</p>
+    <ul class="file-li">
+      <a href="https://www.dropbox.com/s/hy0cyc218lun1hx/BSG-Research-Australia-Content-Protection-January-2017.pdf?dl=0"><li><i class="fa fa-file-pdf-o"></i>BSG Research Australia Content Protection January 2017</li></a>
+      <a href="https://www.dropbox.com/s/d2xkfkrqyqwcziu/Consumer-Behaviour-Access-To-Content-Research-Update-01-09-2015.pdf?dl=0"><li><i class="fa fa-file-pdf-o"></i>Consumer behaviour access to content research update 01-09-2015</li></a>
+      <a href="https://www.dropbox.com/s/m86b4vuq33tlr9f/Creative-Content-Australia-Research-12-17yo27s-2016.pdf?dl=0"><li><i class="fa fa-file-pdf-o"></i>Creative Content Australia research 12-17yos 2016</li></a>
+      <a href="https://www.dropbox.com/s/r30qdo0lnyi097d/Creative-Content-Australia-Research-18-64-year-olds-2016.pdf?dl=0"><li><i class="fa fa-file-pdf-o"></i>Creative Content Australia Research 18-64year olds 2016</li></a>
+      <a href="https://www.dropbox.com/s/2htqmyyslkqaz1z/DeptComms-Online-Copyright-Infringement-Report-FINAL.pdf?dl=0"><li><i class="fa fa-file-pdf-o"></i>DeptComms Online Copyright Infringement Report</li></a>
+    </ul>
+   </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/tether.min.js"></script>
+   	<script src="../bootstrap4/js/bootstrap.min.js"></script>
+    <script src="js/page.js"></script>
+    <script type="text/javascript">
+    $( ".types" ).hide();
+    $( ".legal" ).hide();
+     $(document).ready(function(){
+     $('#types').on('click', function(event) {
+
+       if ( $( ".types" ).is( ":hidden" ) ) {
+       $( ".types" ).slideDown();
+       } else {
+       $( ".types" ).slideUp("fast");
+       }
+     });
+
+     $('#legal').on('click', function(event) {
+
+       if ( $( ".legal" ).is( ":hidden" ) ) {
+       $( ".legal" ).slideDown();
+       } else {
+       $( ".legal" ).slideUp("fast");
+       }
+     });
+   });
+    </script>
+  </body>
+  <footer>
+    <div class="container">
+     <div class="row">
+       <a href="http://jameslewis.com.au"><p class="text-muted col">Site by James Lewis</p></a>
+       <a class="col" rel="license" style="text-align:right;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></div>
+    </div>
+  </footer>
+ </html>
