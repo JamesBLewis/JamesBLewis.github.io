@@ -239,6 +239,10 @@ i {
   border-bottom: 4px solid #545454;
 }
 
+.jumbotron {
+  margin-top: 35px;
+}
+
 /*
 @media screen and (max-width: 500px) {
   div{width:70%;}
