@@ -162,7 +162,7 @@ i {
   text-align: center;
 }
 
-.pages .col {
+.pages .col-sm {
   padding-top: 6vh;
   padding-bottom: 6vh;
   transition: background-color 0.5s ease;
@@ -212,6 +212,10 @@ i {
   padding-bottom: 10px;
 }
 
+.exp .col-sm {
+  padding-bottom: 10px;
+}
+
 .bg-faded {
   background-color: #EFEFEF;
 }
@@ -241,8 +245,32 @@ i {
 
 .jumbotron {
   margin-top: 35px;
+  padding-top: 10px;
+}
+.bimage {
+  background-image: url(../img/file-copy-piracy.jpg);
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+.findings p {
+  font-size: 20px;
 }
 
+.findings .devider {
+padding-bottom: 35px;
+}
+
+.tableauPlaceholder {
+  text-align: center;
+}
+/*
+.tableauViz {
+  height: 350px;
+}
+*/
 /*
 @media screen and (max-width: 500px) {
   div{width:70%;}
