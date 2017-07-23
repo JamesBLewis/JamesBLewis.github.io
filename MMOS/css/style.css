@@ -110,9 +110,6 @@ i {
 
 .fade {
   opacity: 0.4;
-  transition: opacity .35s ease-in-out;
-  -moz-transition: opacity .35s ease-in-out;
-  -webkit-transition: opacity .35s ease-in-out;
 }
 
 .encircle {
@@ -275,6 +272,10 @@ padding-bottom: 35px;
   text-decoration: none;
   color: #545454;
 }
+
+.nav {
+  z-index: 998;
+}
 /*
 .tableauViz {
   height: 350px;
@@ -296,6 +297,6 @@ padding-bottom: 35px;
   font-size: 3.4vh;
   }
   #navbarNavDropdown {
-    z-index: 9999;
+    z-index: 999;
   }
 }
