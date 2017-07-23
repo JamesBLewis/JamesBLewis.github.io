@@ -4,3 +4,25 @@ $(document).ready(function(){
     $( ".navbar-collapse" ).addClass( "show" );
   });
 });
+
+function speak(obj) {
+  $(obj).articulate('speak');
+};
+function stop() {
+  $().articulate('stop');
+};
+
+  $( ".stop" ).hide();
+
+  $(".speak").click(function() {
+      speak('body');
+     $( ".speak" ).hide();
+     $( ".stop" ).show();
+  });
+
+
+  $(".stop").click(function() {
+    stop();
+    $( ".stop" ).hide();
+    $( ".speak" ).show();
+  });

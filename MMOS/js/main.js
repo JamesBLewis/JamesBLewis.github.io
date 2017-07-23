@@ -41,8 +41,5 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: $("#Overview").offset().top -50
     }, 600);
+  });
 });
-});
-function speak(obj) {
-  $(obj).articulate('speak');
-};
