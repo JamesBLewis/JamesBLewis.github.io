@@ -4,8 +4,6 @@ $( ".definitions" ).hide();
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   // tasks to do if it is a Mobile Device
   console.log("Mobile Detected");
-  $( "#dnav" ).hide();
-  $( "#mnav" ).removeClass( "hidden" );
 } else {
   $( "#gif" ).replaceWith( '<video poster="img/hd1080.png" id="bgvid" class="fade video" playsinline autoplay loop muted><source src="Anti-piracy-opt.mp4" type="video/mp4"></video>' );
   function setPlaySpeed() {
@@ -19,7 +17,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 $(document).ready(function(){
-
     // very inificient make better
 		$('#scope').on('click', function(event) {
     if ( $( ".scope" ).is( ":hidden" ) ) {
@@ -46,3 +43,6 @@ $(document).ready(function(){
     }, 600);
 });
 });
+function speak(obj) {
+  $(obj).articulate('speak');
+};
