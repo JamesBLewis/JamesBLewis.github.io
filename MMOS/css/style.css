@@ -276,6 +276,11 @@ padding-bottom: 35px;
 .nav {
   z-index: 998;
 }
+.navbar-nav {
+  text-align: center;
+  margin-top: 12px;
+  border-top: 1px #545454 solid;
+}
 /*
 .tableauViz {
   height: 350px;
@@ -298,5 +303,10 @@ padding-bottom: 35px;
   }
   #navbarNavDropdown {
     z-index: 999;
+  }
+  .navbar-brand {
+    text-align: center;
+    margin-right: 0px;
+    padding-left: 15px;
   }
 }

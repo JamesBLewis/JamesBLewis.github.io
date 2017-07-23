@@ -11,6 +11,7 @@ redirect_from: "/mmos/data"
   <link href="../bootstrap4/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
@@ -90,6 +91,7 @@ redirect_from: "/mmos/data"
     <script src="../js/jquery.min.js"></script>
     <script src="../js/tether.min.js"></script>
    	<script src="../bootstrap4/js/bootstrap.min.js"></script>
+    <script src="js/page.js"></script>
     <script type="text/javascript">
     $( ".types" ).hide();
     $( ".legal" ).hide();
@@ -101,11 +103,6 @@ redirect_from: "/mmos/data"
        } else {
        $( ".types" ).slideUp("fast");
        }
-     });
-
-     $('.navbar-brand').on('click', function(event) {
-       console.log("clicked");
-       $( ".navbar-collapse" ).addClass( "show" );
      });
 
      $('#legal').on('click', function(event) {
