@@ -50,7 +50,7 @@
            <a class="nav-link" href="key-findings.html">Key Findings<span class="sr-only">(current)</span></a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Conclusion</a>
+           <a class="nav-link" href="conclusion.html">Conclusion</a>
          </li>
        </ul>
      </div>
@@ -58,7 +58,7 @@
  </nav>
    <div class="container content findings">
      <div id="coverIMG" class="jumbotron jumbotron-fluid bimage">
-        <p style="font-size:15px; text-align:right; padding-right:20px;">Image source: <a href="http://www.myconfinedspace.com/wp-content/uploads/2009/05/file-copy-piracy.jpg">My Confined Space</a><p>
+        <p class="ref" style="font-size:15px; text-align:right; padding-right:20px;">Image source: <a href="http://www.myconfinedspace.com/wp-content/uploads/2009/05/file-copy-piracy.jpg">My Confined Space</a><p>
        <div class="container">
          <h1 class="display-3">Key Findings</h1>
          <p class="lead">This report examined a variety qualitative a quantitative data sourced from primary and secondary sources. The following are the trends observed, habits identified, and the overall effect streaming pirated content, as well as their coherence to the observations,  gathered from secondary sources.</p>
@@ -109,7 +109,8 @@
      console.log("Mobile Detected");
      $( "#viz1500696070040" ).addClass( "col-sm" );
      $( "#viz1500701402774" ).addClass( "col-sm" );
-     $( "#coverIMG" ).removeClass( "bimage" )
+     $( "#coverIMG" ).removeClass( "bimage" );
+     $( ".ref" ).hide();
    }
    </script>
   </body>
