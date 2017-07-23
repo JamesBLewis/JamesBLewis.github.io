@@ -91,8 +91,15 @@ h2 span {
   line-height: 4.5vh;
   padding-right: 1vh;
   font-style: italic;
+  margin-top: 37vh;
+  text-align: center;
+  max-height: 26vh;
   padding-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
 }
+
+
 
 footer {
   background-color: #EFEFEF;
@@ -285,6 +292,9 @@ padding-bottom: 35px;
   background: #EFEFEF;
   padding-left: 10px;
 }
+.banner {
+  margin-top: 38vh;
+}
 /*
 .tableauViz {
   height: 350px;
@@ -308,4 +318,12 @@ padding-bottom: 35px;
   #navbarNavDropdown {
     z-index: 999;
   }
+  a {
+     color: #97d2de;
+  }
+  .banner {
+    margin-top: 24vh;
+  }
+  .encircle {
+    left: 43%;
 }

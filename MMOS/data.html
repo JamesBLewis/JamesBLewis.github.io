@@ -36,7 +36,30 @@ redirect_from: "/mmos/data"
      </script>
  </head>
 <body>
- <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+  <!--  Nav bar Mobile -->
+     <nav id="mnav" class="navbar fixed-top navbar-light bg-faded hidden">
+             <div class="navbar-header">
+                 <i type="button" class="fa fa-bars  fa-2x pull-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-hidden="true"></i>
+                 <a style="color: #FF3B3F" class="navbar-brand" href="#">MMOS</a>
+             </div>
+             <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav" data-spy="affix">
+                     <li>
+                         <a class="nav-link" href="index.html">Home</a>
+                       </li>
+                        <li class="active-nav">
+                         <a class="nav-link" href="data.html">Data</a>
+                       </li>
+                          <li>
+                         <a class="nav-link" href="key-findings.html">Key Findings</a>
+                       </li>
+                          <li>
+                         <a class="nav-link" href="conclude.html">Conclusion</a>
+                       </li>
+                  </ul>
+             </div>
+     </nav>
+ <nav id="dnav" class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
@@ -93,6 +116,12 @@ redirect_from: "/mmos/data"
    	<script src="../bootstrap4/js/bootstrap.min.js"></script>
     <script src="js/page.js"></script>
     <script type="text/javascript">
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // tasks to do if it is a Mobile Device
+      console.log("Mobile Detected");
+      $( "#dnav" ).hide();
+      $( "#mnav" ).removeClass( "hidden" );
+    }
     $( ".types" ).hide();
     $( ".legal" ).hide();
      $(document).ready(function(){
@@ -113,6 +142,7 @@ redirect_from: "/mmos/data"
        }
      });
    });
+
     </script>
   </body>
   <footer>
