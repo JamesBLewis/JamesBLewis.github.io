@@ -15,6 +15,13 @@ body.fade-out {
     transition: none;
 }
 
+i {
+  color: rgb(17, 145, 193);
+}
+i:hover {
+  color: rgb(12, 112, 149);
+}
+
 .text {
   width: 100%;
   text-align: center;
@@ -186,4 +193,8 @@ display: none;
 .center {
     margin: 0 auto;
     width: 80%;
+}
+
+.icos {
+    padding-top: 20px;
 }

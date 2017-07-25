@@ -273,6 +273,7 @@ padding-bottom: 35px;
 .bnav:hover {
   text-decoration: none;
   color: #545454;
+  transition: color 0.5s ease;
 }
 
 .active-nav {
