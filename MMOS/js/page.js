@@ -1,9 +1,10 @@
-$(document).ready(function(){
-  $('.navbar-brand').on('click', function(event) {
-    console.log("clicked");
-    $( ".navbar-collapse" ).addClass( "show" );
-  });
-});
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  // tasks to do if it is a Mobile Device
+  console.log("Mobile Detected");
+  $( "#dnav" ).hide();
+  $( "#mnav" ).show();
+}
+
 
 function speak(obj) {
   $(obj).articulate('speak');
