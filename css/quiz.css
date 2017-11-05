@@ -1,7 +1,27 @@
 footer {
   text-align: center;
 }
-
-.btn-success {
+#quizbody a {
   margin-top: 10px;
+}
+.questions{
+  margin-left: 0px;
+}
+
+.custom-select {
+  margin-top:6px;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .custom-select {
+    margin-bottom: 10px;
+  }
+  .heading {
+    padding-top: 10px;
+  }
 }

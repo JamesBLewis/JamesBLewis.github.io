@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow:
+Allow: /index.html
+Allow: /apa.html
+Allow: /MMOS/

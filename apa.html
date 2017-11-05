@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75010585-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75010585-1');
+    </script>
+
     <meta charset="utf-8">
+    <title>APA Quiz</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="James Lewis" />
+    <meta name="description" content="James Lewis' Website" />
+    <meta name="keywords" content="James Lewis melbourne australia responsive web design" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="James Lewis">
+    <!--[if lt IE 9]>
+      <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="robots" content="noodp"/>
+    <link rel="canonical" href="http://www.jameslewis.com.au/"/>
+    <meta property="og:locale" content="en-au"/>
+    <meta property="og:type" content="blog"/>
+    <meta property="og:title" content="APA Quiz"/>
+    <meta property="og:description" content="A quiz with dynamic questions to test a user's knowledge of the APA referencing style"/>
+    <meta property="og:url" content="http://www.jameslewis.com.au/apa.html"/>
+    <meta property="og:site_name" content="James Lewis Website"/>
+    <script type='application/ld+json'>
+    {
+      "@context": "http://schema.org",
+      "@type":"Person",
+      "url":"http://www.jameslewis.com.au/MMOS/index.html",
+      "name":"APA Quiz"
+    }
+    </script>
     <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
 
     <title>APA Referencing Quiz</title>
@@ -18,7 +53,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </head>
-
   <body>
 
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -33,26 +67,142 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Do you hate APA? So do I!</h1>
-        <p>Unfortunately we have to learn it anyway so I thought I'd make the process more fun (for me at least). Simply read the data in the paragraph or the table (will depend on the question) and write down a reference for it in the APA style. Then <b>click the green button</b> to see how doomed you are :)</p>
-        <p class="questions"><a class="btn btn-primary btn-lg" href="#" role="button" id="start">Begin Quiz</a></p>
+        <p>Unfortunately we have to learn it anyway so I thought I'd make the process more fun (for me at least). Simply read the data in the paragraph or the table (will depend on the question) and write down a reference for it in the APA style. Then <b>click the green button</b> to see how doomed you are. FYI for the artical, book, report  names etc I was forced to use a list or products on google. There are unfortunately no lists of reports (that I could find) on google. Feel free to contact me if you find any :)</p>
+        <h2>Question</h2>
+        <div id="questions" class="questions row">
+          <select class="col-sm-3 custom-select" id="refType">
+            <option selected disabled>Select Reference Type</option>
+            <option value="1">Random</option>
+            <option value="2">Book</option>
+            <option value="3">Webpage</option>
+          </select>
+          <button class="btn btn-primary btn-lg col-sm-2" href="#" role="button" id="start">Begin Quiz</button>
       </div>
+      <textarea id="input3" rows="4" hidden>
+"FirstName","LastName","Webpage","Company","Year","State","City","ReportName","Country"
+"Duncan","Cunningham","http://www.google.cn/science/2016/07/ping","Rockwell Collins","2010","Oregon","Portland","Wagner Ht1000 Heat Tool","United States"
+"Cedric","Chan","http://www.simplemachines.org/goto/stories/howto/people/2013/04/sitemap","Supervalu","2002","Virginia","Virginia Beach","Lincoln Industrial Grease Gun Pistol 16 0z W","United States"
+"Jamar","Marks","http://www.columbia.edu/wiki/media/media/2014/06/more.html","Cinemark Usa","2008","Kansas","Overland Park","Dsr Schumacher Psj","United States"
+"Alia","Strong","http://www.newyorker.com/arts/en/downloads/2014/06/listen","The Bank Of New York Mellon Corporation","2003","Texas","Plano","Campbell Hausfeld 17",
+"Otto","Dennis","http://www.abc.net.au/cart/medical/2015/08/file.php","Hormel Foods Corporation","2010","California","San Bernardino","Black & Decker Matrix Impact Driver Head Attachment","United States"
+"Hugo","Walls","http://www.businessweek.com/metadata/comics/2015/03/something.html","Cintas Corporation","2003","Texas","Irving","Eclipse 902","United States"
+"Winston","Coleman","http://www.seattletimes.com/people/answers/forum/cart/2013/01/story.html","Graybar Services","2014","Illinois","Joliet","Arrow Fastener Plier Type Stapler","United States"
+"Elaina","Cabrera","http://www.wikia.com/reports/2016/06/file.txt","Amerco","2016","Illinois","Joliet","Lincoln Industrial Fully Automatic Pneumatic Grease Gun","United States"
+"Jaylyn","Delaney","http://www.mysql.com/questions/tmp/logs/2014/03/modo.html","Emerson Electric Co","2010","Washington","Bellevue","Multi",
+"Omari","Francis","http://www.vinaora.com/commons/examples/index/2014/06/article","Belk","2011","Kansas","Overland Park","Black And Decker 12v Max Lithium Ion Cordless Drill",
+"Shelby","Sullivan","http://www.microsoft.com/downloads/stories/2015/11/index","Stater Bros Markets","2003","California","Oakland","Campbell Hausfeld 17",
+"Avery","Pruitt","http://www.is.gd/api/medical/title/howto/2013/05/robots.txt","Regions Financial Corporation","2009","New Jersey","Jersey City","Bosch Power Tools 3",
+"Marisol","Blevins","http://www.vistaprint.com/spring/wikipedia/images/2014/02/article","Health Net","2007","South Dakota","Sioux Falls","Weller Sp40l Lightweight Soldering Iron",
+"Jada","Atkinson","http://www.webmd.com/questions/docs/arts/2014/05/maps.html","Allegheny Technologiesorporated","2015","Tennessee","Murfreesboro","Bostitch 26 Gallon",
+"Connor","Michael","http://www.imdb.com/goto/fr/url/2014/10/atlas.html","Crown Castle International Corp","2014","Arizona","Peoria","Audiopipe Thsy3075c Pipeman Train Horn Air Compressor",
+"Kristen","Delgado","http://www.apache.org/books/logs/2015/01/post.html","Kraft Foods","2007","California","San Jose","Hitachi 4 1",
+"Alivia","Cunningham","http://www.apache.org/medical/browse/blog/2014/07/faq.html","Levi Strauss And Co","2008","Florida","Tallahassee","Lincoln Industrial 14",
+"Marisa","Weber","http://www.gravatar.com/examples/reports/2015/07/robots.txt","Tetra Tech","2007","Arizona","Chandler","Hitachi 2",
+"Grady","Becker","http://www.uiuc.edu/resources/2016/08/something.html","Genesco","2005","Massachusetts","Boston","Edsal Heavy",
+"Nancy","Fuller","http://www.360.cn/resources/wiki/2015/09/more.html","Equifax","2002","Nebraska","Lincoln","Bosch 94500 Rip Fence Jigsaw",
+"Erika","Espinoza","http://www.posterous.com/forum/commons/contacts/questions/2013/08/faq.html","Mantech International Corporation","2012","Michigan","Grand Rapids","Lumberjack Tools Tta2000 2in Industrail Series Tenon Cutter",
+"Samiya","Raymond","http://www.globo.com/option/2016/07/robots.txt","Oneok","2007","Colorado","Colorado Springs","Kawasaki 4",
+"Lola","Clay","http://www.google.com.au/media/2016/06/sitemap","Ibm","2004","Oklahoma","Oklahoma City","Astro Pneumatic 223k Air Belt Sander",
+"Lindsay","Perry","http://www.geocities.jp/title/files/reports/2014/05/what.html","Cabot Corporation","2014","California","Irvine","Weller Analog Soldering Station","United States"
+"Hailee","Jennings","http://www.1und1.de/answers/blog/examples/articles/2013/10/team.html","Century Link","2014","New York","Buffalo","Buffalo Tools Stainless Steel Work Table","United States"
+"Edison","Nielsen","http://www.icio.us/answers/discussion/2015/01/person.php","Genworth Financial","2015","Kansas","Topeka","Bostitch 6 Amp Orbital Jig Saw","United States"
+"Adalynn","Harding","http://www.comcast.net/media/2016/06/forgot-password","Stater Bros Markets","2012","Pennsylvania","Allentown","Skil 1810 1","United States"
+"Selah","Alford","http://www.creativecommons.org/features/metadata/2015/08/default","Becton","2005","Illinois","Rockford","Lumberjack Tools Hsbk1 Home Series Beginners Kit","United States"
+"Corey","Sawyer","http://www.acquirethisname.com/index/2016/05/index","The Dow Chemical Company","2004","Arizona","Tucson","Campbell Hausfeld Air Compressor Oil ","United States"
+"Alisha","Warner","http://www.sogou.com/goto/discussion/2015/05/file.txt","Ross Stores","2008","Arizona","Surprise","Ingersoll Rand 244a 1","United States"
+"Scarlett","Barrett","http://www.pcworld.com/questions/posts/people/2014/01/contact-us","Aptargroup","2006","Kansas","Topeka","Black & Decker 20","United States"
+"Lillie","Savage","http://www.creativecommons.org/arts/title/docs/resources/2013/06/echo.htm","Hyatt Hotels Corporation","2011","Ohio","Toledo","Campbell Hausfeld Air Compressor Oil ","United States"
+"Cody","Armstrong","http://www.miibeian.gov.cn/science/entertainment/today/people/2013/11/404.html","Metlife","2001","New Mexico","Albuquerque","All Power 3","United States"
+"Ellis","Mclean","http://www.hibu.com/music/goto/goto/2014/08/file.php","Sra International","2006","Kansas","Overland Park","Black & Decker 1","United States"
+"Kaydence","Olson","http://www.earthlink.net/contacts/posts/2015/01/logout","The Great Atlantic & Pacific Tea Co","2012","Florida","Tampa","Alpha Fry Am13460 Rosin Core Solder And Dispenser",
+"Marvin","Yang","http://www.slideshare.net/opinions/2016/12/modo.html","Sherwin","2005","Texas","Amarillo","Got Air Heavy Duty Portable Air Compressor",
+"Weston","Miles","http://www.about.me/downloads/music/stories/resources/2013/08/team.html","Metropcs Communications","2010","Colorado","Colorado Springs","Stanley Fatmax 20",
+"Heather","Winters","http://www.accuweather.com/media/answers/metadata/2014/10/more.html","J","2005","Texas","Plano","Black & Decker 16v Max Lithium Cordless Driver",
+"Jase","Bryant","http://www.t-online.de/guide/2016/01/contact-us","True Value Company","2005","Alabama","Mobile","Eclipse 900",
+"Macey","Adkins","http://www.msu.edu/blog/media/2015/11/index","The Children's Place Retail Stores","2010","California","San Bernardino","Retractable Screw",
+"Kyle","Shannon","http://www.addthis.com/reports/questions/2015/02/503.html","Ugi Corporation","2010","Missouri","St","Contractors Tornado Double Blade Dual Saw",
+"Maximilian","Owens","http://www.japanpost.jp/articles/docs/medical/fr/2013/08/file.php","Citrix Systems","2012","Nevada","Reno","Irwin 5",
+"Andrea","Wong","http://www.naver.com/science/people/entertainment/2014/01/503.html","Charming Shoppes","2014","Arkansas","Little Rock","Stanley Heavy Duty Aluminum Stapler",
+"Kayla","Mosley","http://www.nba.com/articles/science/url/howto/2013/04/team.html","Biogen Idec","2005","Georgia","Atlanta","Hyundai Hpc3010 Air Compressor Kit",
+"Myah","Mack","http://www.sohu.com/files/reports/music/entertainment/2013/11/team.html","Viacom","2005","Virginia","Norfolk","Black And Decker 3",
+"Joe","Mendoza","http://www.utexas.edu/blog/media/2015/11/security.html","At&t","2013","New Hampshire","Manchester","Pentagon Professional Aluminum Drywall Bench",
+"Kristian","Velez","http://www.dailymail.co.uk/comics/answers/fr/2014/10/file.php","Southern Union Company","2000","California","Fresno","Wolo Manufacturing 800compressor Model 800 Tiger 2",
+"Amari","Gay","http://www.cyberchimps.com/features/2016/03/person.php","Alaska Air Group","2015","South Carolina","Charleston","Superior Tool 2","United States"
+"Kailyn","Fry","http://www.reverbnation.com/forum/forum/books/2014/11/404.html","Sandisk Corporation","2006","Virginia","Hampton","Powryte Air Reciprocating Saw","United States"
+"Ember","Solis","http://www.dropbox.com/examples/downloads/2015/11/login.html","Gnc","2005","Alabama","Huntsville","Paasche Air Brush Dual Action Airbrush Set","United States"
+"Julian","Snider","http://www.360.cn/books/cart/2015/01/faq.html","Southwest Airlines Corporation","2016","Indiana","Fort Wayne","Powryte 3","United States"
+"Leila","Eaton","http://www.about.com/group/stories/contacts/2014/05/forgot-password","Energizer Holdings","2013","New Jersey","Newark","Ad Tech Multi","United States"
+"Saniya","Townsend","http://www.google.fr/medical/group/media/downloads/2013/07/listen","Officemaxorporated","2008","California","Bakersfield","Eclipse 900","United States"
+"Alessandra","Hunt","http://www.tuttocitta.it/people/answers/questions/2014/07/team.html","Verizon Communications","2013","California","Stockton","Skil 2364","United States"
+"Briana","Page","http://www.wufoo.com/spring/2016/10/news","Fm Global","2001","Utah","West Valley City","Primefit 1","United States"
+"Holly","Hickman","http://www.answers.com/posts/today/questions/reports/2013/09/sitemap","Neweggorporated","2009","Texas","Laredo","Pentagon Professional Aluminum Drywall Bench","United States"
+"Brody","Maxwell","http://www.umich.edu/today/url/tmp/goto/2013/08/file.txt","Walgreen Co","2000","Nevada","North Las Vegas","Buffalo Tools Electric 110v 3","United States"
+"Tatum","Pruitt","http://www.youtube.com/people/wiki/opinions/2014/07/ping","Pacer International","2007","Illinois","Naperville","Jflint Products 306 Mr Hard Water","United States"
+"Jairo","Gordon","http://www.creativecommons.org/option/people/medical/2014/03/login.html","The Lubrizol Corporation","2001","Mississippi","Jackson","Hitachi 7 Disc Grinder","United States"
+"Benson","Melendez","http://www.pagesperso-orange.fr/browse/medical/2015/02/forgot-password","Stater Bros Markets","2004","California","Anaheim","Skil Sb18c Sb18a 18v Ni","United States"
+"Marcus","Merrill","http://www.google.pl/more/arts/2015/07/404.html","The Shaw Group","2004","Missouri","Independence","Buffalo Tools Pro Series Angle Grinding Kit","United States"
+"Phillip","Miller","http://www.mediafire.com/more/guide/wikipedia/2014/11/robots.txt","Eastman Chemical Company","2006","Louisiana","Shreveport","Black & Decker 7750a 4",
+"Aylin","Morrison","http://www.163.com/opinions/more/en/opinions/2013/04/security.html","Tutor Perini Corporation","2003","Oklahoma","Norman","Dualsaw Destroyer Cs650 Saw",
+"Cheyanne","Perkins","http://www.cyberchimps.com/docs/2016/09/content.jsp","Solutia","2007","Kansas","Overland Park","Trinity Stainless Steel Table",
+"Elle","Anderson","http://www.instagram.com/guide/blog/discussion/2014/04/atlas.html","Bank Of America","2013","Rhode Island","Providence","Fry Technologies Cookson Elect Am33955 95",
+"Holly","Wong","http://www.mediafire.com/answers/2016/10/news","West Corporation","2009","California","Sacramento","Dremel Two Speed Rotary Tool Kit With 15 Accessories 200",
+"Briella","Noble","http://www.biglobe.ne.jp/logs/more/title/questions/2013/07/news","Costco Wholesale Corporation","2003","Florida","Tallahassee","Black & Decker Matrix Oscillating Head Attachment",
+"Melissa","Willis","http://www.uiuc.edu/arts/2016/09/team.html","Eog Resources","2011","California","Sacramento","Buffalo Tools Ps07215 18",
+"Ishaan","Soto","http://www.springer.com/api/2016/01/watch","Boise Cascade Company","2004","California","San Jose","Fry Technologies Cookson Elect Am53945 Flo",
+"Kaiya","Bolton","http://www.harvard.edu/media/2016/11/robots.txt","W","2009","Virginia","Virginia Beach","Skil 2364",
+"Amara","Taylor","http://www.hostgator.com/tmp/spring/2015/06/news","Baxter International","2010","Virginia","Virginia Beach","Kawasaki 0",
+"Vaughn","Christian","http://www.zdnet.com/music/medical/examples/2014/01/team.html","Apple","2013","Tennessee","Clarksville","Dremel 560 Drywall Cutting Bit",
+"Tristen","Melton","http://www.domainmarket.com/science/wiki/music/2014/10/listen","Hologic","2010","Connecticut","Bridgeport","Dewalt Power Tools 7",
+"Valentina","Haney","http://www.ca.gov/opinions/url/logs/more/2013/01/login","Airtran Holdings","2000","Nevada","Reno","Dremel Mm610 Flexible Scraper Blade",
+"Ruth","Butler","http://www.ftc.gov/howto/title/opinions/wikipedia/2013/06/story.html","Amerisourcebergen","2009","Indiana","Fort Wayne","Microflex Mxbd","United States"
+"Evie","Stout","http://www.de.vu/more/2016/05/atlas.html","Dominion Resources","2014","Georgia","Augusta","Eclipse 902","United States"
+"Phillip","Terry","http://www.exblog.jp/entertainment/images/posts/2014/12/article","Yrc Worldwide","2014","Minnesota","Minneapolis","Dremel Sm500 3","United States"
+"Jada","Stephenson","http://www.china.com.cn/comics/medical/2015/08/listen","Health Net","2004","California","Oxnard","Retractable Screw","United States"
+"Kenny","Becker","http://www.bluehost.com/spring/en/en/2014/11/security.html","Darden Restaurants","2003","Colorado","Aurora","Powermate 10 Gallon Proforce Oil Free Vertical Air Compressor","United States"
+"Carly","Decker","http://www.about.me/science/people/opinions/questions/2013/10/what.html","Resolute Forest Products","2013","Indiana","Evansville","Black & Decker Matrix Router Head Attachment","United States"
+"Whitney","Avery","http://www.g.co/tmp/option/2015/06/url","Pc Connection","2006","Michigan","Lansing","Dremel Universal Carbide Flush Cut Blade",
+"Toby","Reese","http://www.wordpress.com/spring/articles/2015/10/article","Verizon Communications","2011","Oklahoma","Norman","Eclipse 900",
+"Nayeli","Nash","http://www.w3.org/api/2016/04/file.php","Sonoco Products","2012","Colorado","Colorado Springs","Cherry Gel Pumice Hand Cleaner",
+"Eli","Buckley","http://www.over-blog.com/guide/discussion/reports/2014/11/story.html","News Corporation","2012","Texas","Arlington","Century Drill And Tool Jig Saw Blade (set Of 5) (set Of 5)",
+"Mary","Mcmillan","http://www.indiatimes.com/index/goto/questions/2014/09/json-validator.html","The Andersons","2000","Nevada","Henderson","Primefit Industrial",
+"Adriana","Coffey","http://www.businessinsider.com/howto/questions/posts/comics/2013/08/file.txt","The Tjx Companies","2012","Texas","Fort Worth","Plews & Edelmann Lever",
+"Everett","Gibson","http://www.soundcloud.com/today/features/2015/06/logout","Brown","2014","Arizona","Phoenix","Bosch 4395",
+"Trace","Delgado","http://www.yahoo.com/cart/index/medical/2014/07/story.html","The Principal Financial Group","2014","Illinois","Peoria","Freud 12 44t Diablo General Purpose Chop",
+"Milania","Pena","http://www.gnu.org/api/option/logs/discussion/2013/11/links.html","Comericaorporated","2000","Arkansas","Little Rock","Campbell Hausfeld 1",
+"Emmalyn","Lowery","http://www.japanpost.jp/stories/2016/06/503.html","Kar Auction Services","2007","Louisiana","Baton Rouge","Retractable Screw",
+"Moriah","Sharp","http://www.deviantart.com/entertainment/medical/posts/browse/2013/01/faq.html","Visteon Corporation","2006","New York","Buffalo","Eclipse 902",
+"Luz","Holt","http://www.kickstarter.com/answers/2016/02/index","Xerox","2006","Kansas","Wichita","Campbell Hausfeld 17",
+"Zoie","Webster","http://www.epa.gov/music/2016/01/index.html","Mantech International Corporation","2000","Florida","Jacksonville","Wen Wen 10 15 Amp Sliding Compound Miter Saw",
+"Jaelynn","Rivera","http://www.bandcamp.com/api/images/api/2014/07/json-validator.html","The Mcgraw","2008","Pennsylvania","Pittsburgh","Mini Glue Sticks 4",
+"Mallory","Underwood","http://www.fc2.com/wiki/logs/blog/files/2013/02/team.html","Jacobs Engineering Group","2005","Pennsylvania","Pittsburgh","Ad Tech Designer Series Lo Temp Mini Glue Gun",
+"Cheyenne","Weiss","http://www.tinyurl.com/comics/stories/posts/music/2013/04/index.html","The New York Times Company","2012","Kansas","Olathe","Alpha Fry Am13460 Rosin Core Solder And Dispenser","United States"
+"Courtney","Maynard","http://www.domainmarket.com/wiki/arts/index/entertainment/2013/07/503.html","Synovus Financial Corp","2007","Florida","Coral Springs","Stanley Black & Decker Dw304pk Dw 10 Amp Reciprocating Saw Kit","United States"
+"Dulce","Marsh","http://www.wikia.com/discussion/howto/index/comics/2013/05/index.html","Cephalon","2011","California","Fresno","Black & Decker Lithium Saw","United States"
+"Janelle","Vance","http://www.twitpic.com/questions/stories/2015/10/links.html","Raymond James Financial","2007","New Jersey","Elizabeth","Eclipse 902","United States"
+"Yadiel","Harmon","http://www.deliciousdays.com/people/entertainment/2015/03/story.html","Amazon","2016","Connecticut","Bridgeport","Bosch Pl1682 3","United States"
+      </textarea>
     </div>
+  </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row" id="quizbody">
-        <div class="col">
+        <div class="col-sm">
           <h2>Answer Here</h2>
-          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="insert really great refrence here"></textarea>
-          <a class="btn btn-success" href="#" role="button">Submit »</a>
+          <textarea class="form-control" id="UsrInput" rows="4" placeholder="Insert really great refrence here."></textarea>
+          <a class="btn btn-success" href="#!" role="button" id="submitAns">Check Answer</a>
+          <a class="btn btn-danger" href="#!" id="back" role="button">Back</a>
+          <a class="btn btn-primary hidden" href="#" role="button" id="next">Next</a>
         </div>
-        <div class="col">
-          <h2>Results</h2>
-          <p>No results found please submit an answer first.</p>
-       </div>
+        <div class="col-sm">
+          <h2 class="heading">Results</h2>
+          <div id="results">
+            <p>No results found. Please submit an answer first.</p>
+          </div>
+        </div>
       </div>
       <footer>
-        <p><a href="#">Made with ♡ by James Lewis</a></p>
+        <p><a href="index.html">v0.8 made with ♡ by James Lewis</a></p>
       </footer>
     </div> <!-- /container -->
 
