@@ -1,9 +1,19 @@
+th {
+
+}
+
+td {
+  font-size: 13px;
+}
+
 footer {
   text-align: center;
 }
+
 #quizbody a {
   margin-top: 10px;
 }
+
 .questions{
   margin-left: 0px;
 }
@@ -17,11 +27,29 @@ footer {
   display: none;
 }
 
+.fa-question-circle {
+  text-align: right;
+  padding-top: 8px;
+  color: #292b2c;
+}
+
+.devider {
+  padding-top: 12px;
+}
+
+.link {
+  padding-top: 16px;
+  text-align: left;
+}
+
 @media (max-width: 575px) {
   .custom-select {
     margin-bottom: 10px;
   }
   .heading {
     padding-top: 10px;
+  }
+  .fa-question-circle {
+    display: none;
   }
 }

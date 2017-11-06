@@ -47,6 +47,7 @@
     <title>APA Referencing Quiz</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/quiz.css" rel="stylesheet">
 
@@ -54,6 +55,75 @@
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </head>
   <body>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">APA Guide</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Book/Report Referencing</h2>
+                <table class="table table-striped table-sm table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Auther</th>
+                      <th scope="col">Year Of Publication</th>
+                      <th scope="col">Title + Subtitle</th>
+                      <th scope="col">Series Title and Volume</th>
+                      <th scope="col">Edition</th>
+                      <th scope="col">Place of Publication</th>
+                      <th scope="col">Publisher</th>
+                      <th scope="col">Pages</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <tr>
+                     <td>last name, first initial.</td>
+                     <td>(year).</td>
+                     <td>title subtitle.</td>
+                     <td>volume number.</td>
+                     <td>(edition.)</td>
+                     <td>suburb. state:</td>
+                     <td>publisher,</td>
+                     <td>page span</td>
+                   </tr>
+                   <tr>
+                     <td colspan="8">Lewis, J. (2017). How to not fail: IT Vol 1.,(4th ed.) Melbourne, VIC: James inc, 1-10.</td>
+                   </tr>
+                 </tbody>
+                </table>
+                <h5 class="devider">Webpage/Artical Referencing</h2>
+                <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Auther</th>
+                      <th scope="col">Year of Publication</th>
+                      <th scope="col">Title of Webpage</th>
+                      <th scope="col">Name of Web Host</th>
+                      <th scope="col">URL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <tr>
+                     <td>last name, first name,</td>
+                     <td>(year).</td>
+                     <td>title,</td>
+                     <td>host name.</td>
+                     <td>Retrived from URL</td>
+                   </tr>
+                   <tr>
+                     <td colspan="5">Lewis, James, (2017). Do you hate APA? So do I!, James inc. Retrieved from http://jameslewis.com.au</td>
+                   </tr>
+                 </tbody>
+                </table>
+              </div>
+            </div>
+      </div>
+    </div>
 
     <nav class="navbar navbar-inverse navbar-static-top">
       <ul class="nav nav-pills">
@@ -66,7 +136,10 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Do you hate APA? So do I!</h1>
+        <div class="row">
+          <h1 class="col">Do you hate APA? So do I!</h1>
+          <a href="#!" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-question-circle fa-2x col" aria-hidden="true"></i></a>
+        </div>
         <p>Unfortunately we have to learn it anyway so I thought I'd make the process more fun (for me at least). Simply read the data in the paragraph or the table (will depend on the question) and write down a reference for it in the APA style. Then <b>click the green button</b> to see how doomed you are. FYI for the artical, book, report  names etc I was forced to use a list or products on google. There are unfortunately no lists of reports (that I could find) on google. Feel free to contact me if you find any :)</p>
         <h2>Question</h2>
         <div id="questions" class="questions row">
@@ -190,9 +263,20 @@
         <div class="col-sm">
           <h2>Answer Here</h2>
           <textarea class="form-control" id="UsrInput" rows="4" placeholder="Insert really great refrence here."></textarea>
-          <a class="btn btn-success" href="#!" role="button" id="submitAns">Check Answer</a>
-          <a class="btn btn-danger" href="#!" id="back" role="button">Back</a>
-          <a class="btn btn-primary hidden" href="#" role="button" id="next">Next</a>
+            <div class="row">
+            <div class="col-sm-3">
+              <a class="btn btn-success" href="#!" role="button" id="submitAns">Check Answer</a>
+            </div>
+            <div class="col-sm-2">
+              <a class="btn btn-danger" href="#!" id="back" role="button">Back</a>
+            </div>
+            <div class="col-sm-2 hidden" id="next-col">
+              <a class="btn btn-primary " href="#" role="button" id="next">Next</a>
+            </div>
+            <div class="col-sm-1">
+              <div class="link"><a href="#!" data-toggle="modal" class="link" data-target=".bd-example-modal-lg">help</a></div>
+            </div>
+          </div>
         </div>
         <div class="col-sm">
           <h2 class="heading">Results</h2>
@@ -202,7 +286,7 @@
         </div>
       </div>
       <footer>
-        <p><a href="index.html">v0.8 made with ♡ by James Lewis</a></p>
+        <p><a href="index.html">v0.9 made with ♡ by James Lewis</a></p>
       </footer>
     </div> <!-- /container -->
 
@@ -214,6 +298,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery.csv.min.js"></script>
-    <script src="js/quiz.js"></script>
+    <script src="js/quiz.min.js"></script>
   </body>
 </html>

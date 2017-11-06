@@ -45,32 +45,38 @@ $(document).ready(function() {
   });
 
   $( "#submitAns" ).click(function() {
-    if($(this).hasClass( "disabled" )) {
-      // do nothing
-    } else {
-      $(this).addClass('disabled');
-      $("#next").removeClass('hidden');
-      var input = $("#UsrInput").val();
-      $('#results').empty();
-      $('#results').html(answer);
-      checkInput(input);
-    }
+      if($(this).hasClass( "disabled" )) {
+        // do nothing
+      } else {
+        var input = $("#UsrInput").val();
+        if (input != "") {
+          $(this).addClass('disabled');
+          $("#next-col").removeClass('hidden');
+          $('#results').empty();
+          $('#results').html(answer);
+          checkInput(input);
+        } else {
+              alert("Please atleast try before checking the answer!");
+        }
+      }
   });
 
   $( "#next" ).click(function() {
     var revert = "<p>No results found. Please submit an answer first.</p>";
-    $(this).addClass('hidden');
+    $("#next-col").addClass('hidden');
     $("#UsrInput").val('');
     $('#results').empty();
     $('#results').html(revert);
     startq();
     $("#submitAns").removeClass('disabled');
   });
-
 });
 
 function checkInput(input) {
   if (input != "") {
+    if(type == 1) {
+      type = Math.floor(Math.random() * ((3-2)+1) + 2);
+    }
   input = input.toLowerCase();
   FirstName = FirstName.toLowerCase();
   LastName = LastName.toLowerCase();
@@ -195,7 +201,7 @@ function checkInput(input) {
         issues++;
       }
       if (order[2] == -1) {
-        answer = answer + "<p class='text-warning' >" + year + " - Last name not found</p>";
+        answer = answer + "<p class='text-warning' >" + year + " - Not found</p>";
         issues++;
       } else if(order[2] < order[1] || order[2] > order[3]){
         answer = answer + "<p class='text-warning' >" + year + " - In wrong place</p>";
