@@ -13,12 +13,19 @@ var webpage = "";
 var pages = "";
 var issues = "";
 var answer = "<div class='bg-danger text-white'>Error: Could not find answer</div>"
+
 $( "#quizbody" ).hide();
 $("#start").addClass('disabled');
 
 $(document).ready(function() {
 
   $( "#start" ).click(function() {
+    type = $( "#refType" ).val();
+    if(type == 1) {
+      type = Math.floor(Math.random() * ((3-2)+1) + 2);
+      console.log("type changed " + type);
+    }
+
     if($(this).hasClass( "disabled" )) {
       alert("Please select refrence type first");
     } else {
@@ -74,9 +81,7 @@ $(document).ready(function() {
 
 function checkInput(input) {
   if (input != "") {
-    if(type == 1) {
-      type = Math.floor(Math.random() * ((3-2)+1) + 2);
-    }
+
   input = input.toLowerCase();
   FirstName = FirstName.toLowerCase();
   LastName = LastName.toLowerCase();
@@ -244,14 +249,13 @@ function checkInput(input) {
 }
 
 function startq() {
-  if (type == "") {
-  type = $( "#refType" ).val();
-  }
+
   var input = $('#input3').val();
   var data = $.csv.toObjects(input);
   var html = generateTable(data, type);
   $('#questions').empty();
   $('#questions').html(html);
+
 }
 
 // build HTML table data from an array (one or two dimensional)
@@ -285,7 +289,7 @@ function generateTable(data, type) {
     var act = ["You coppied information from", "You got images from", "You used information from", "You stole info from"];
     webpage = data[Math.floor(Math.random() * data.length)]["Webpage"];
     var host = ["In the site's footer it says powerd by", "The logo in the top left of the page is a trademark of", "The domain belongs to", "The site is hosted by", "The site was posted on bookface.com which is owned by"];
-    var auther = ["and appears to have been written in", "it seems to have been posted on the internet in", "the year which the artical was thrown on the web was", "the page says it was posted in"];
+    var auther = ["and appears to have been written in", "it seems to have been posted on the internet in", "the year which the article was thrown on the web was", "the page says it was posted in"];
     // need to add state
 
 
@@ -295,11 +299,8 @@ function generateTable(data, type) {
     SCountry = ", " + Country + ",";
     }
 
-    if (type == 1) {
-      type = Math.floor(Math.random() * ((3-2)+1) + 2);
-    }
-
     if (type == 2) {
+      console.log("type is: " + type);
       html = "<p class='text-primary'>"
        + FirstName + " " + LastName
        + " " + relation[Math.floor(Math.random() * relation.length)]
