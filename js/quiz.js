@@ -158,8 +158,10 @@ function checkInput(input) {
         issues++;
       }
       if (order[6] == -1) {
+        if (input.indexOf("volume " + selectseries.slice(-1)) == -1) {
         answer = answer + "<p class='text-warning' >" + selectseries + " - Not found</p>";
         issues++;
+        }
       }
       if (order[7] == -1) {
         answer = answer + "<p class='text-warning' >" + city + " - Not found</p>";
@@ -261,7 +263,6 @@ function startq() {
 // build HTML table data from an array (one or two dimensional)
 function generateTable(data, type) {
   var html = '';
-  var SCountry;
 
   if(typeof(data[0]) === 'undefined') {
     return null;
@@ -290,13 +291,12 @@ function generateTable(data, type) {
     webpage = data[Math.floor(Math.random() * data.length)]["Webpage"];
     var host = ["In the site's footer it says powerd by", "The logo in the top left of the page is a trademark of", "The domain belongs to", "The site is hosted by", "The site was posted on bookface.com which is owned by"];
     var auther = ["and appears to have been written in", "it seems to have been posted on the internet in", "the year which the article was thrown on the web was", "the page says it was posted in"];
-    // need to add state
+    var location = [", located in", ", based in", ", in the area of"];
 
 
     if (Country == null || Country == "" || Country == "undefined") {
       Country = "";
-    } else {
-    SCountry = ", " + Country + ",";
+
     }
 
     if (type == 2) {
@@ -305,10 +305,10 @@ function generateTable(data, type) {
        + FirstName + " " + LastName
        + " " + relation[Math.floor(Math.random() * relation.length)]
        + " " + ReportName + " " + selectedition + " " +selectseries + publisher[Math.floor(Math.random() * publisher.length)]
-       + " " + Company + ", located in " + city + SCountry + " " + when[Math.floor(Math.random() * when.length)]
+       + " " + Company + location[Math.floor(Math.random() * location.length)] + " " + city + AnswerCountry(Country) + " " + when[Math.floor(Math.random() * when.length)]
        + " " + year + "." + pagelead[Math.floor(Math.random() * pagelead.length)] + " " + selectpage + ".";
 
-       answer = "<label for='answer'>Recommended Answer:</label><p id='answer' class='text-success'>" + LastName + ", " + FirstName.charAt(0) + ". (" + year + "). " + ReportName + " " + answerSeries(selectseries) + ", " + answerEdition(selectedition) + city + ": " + Company + ", " + selectpage + ".<p>"
+       answer = "<label for='answer'>Recommended Answer:</label><p id='answer' class='text-success'>" + LastName + ", " + FirstName.charAt(0) + ". (" + year + "). " + ReportName + " " + answerSeries(selectseries) + ", " + answerEdition(selectedition) + city + AnswerCountry(Country) + ": " + Company + ", " + selectpage + ".<p>"
     } else if (type == 3) {
       html = "<p class='text-primary'>"
       + act[Math.floor(Math.random() * act.length)] + " " + webpage + ". It was titled " + ReportName + " " + auther[Math.floor(Math.random() * auther.length)] + " " + year + " by " + FirstName + " " + LastName + ". " + host[Math.floor(Math.random() * host.length)] + " " + Company + ".";
@@ -325,7 +325,7 @@ function answerEdition(edition) {
   if (edition == "") {
     return "";
   } else {
-    return "("+edition+")";
+    return "("+edition+") ";
   }
 }
 
@@ -334,5 +334,13 @@ function answerSeries(series) {
     return "";
   } else {
     return series+".";
+  }
+}
+
+function AnswerCountry(Country) {
+  if (Country == "") {
+    return "";
+  } else {
+  return ", " + Country + ",";
   }
 }
