@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dougal Problems</title>
+
+    <style>
+    body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+    footer {
+      text-align: center;
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:50px;   /* Height of the footer */
+      background:#fff;
+      color: #dbdbdb;
+    }
+
+h1 {
+  padding-top: 20px;
+}
+h2 {
+  text-align: center;
+}
+text {
+  font-size: 52px;
+}
+/* ANIMATE LIQUID FILL */
+.liquid {
+   transform: translateX(100%);
+   transform: translateY(100%);
+   opacity: 0.8;
+   animation: fill 3.2s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+   0%{
+      opacity: 0.5;
+      transform: translateY(100%);
+   }
+   100%{
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* ANIMATE STEAM */
+.steam {
+   stroke: #F7F7F7;
+   stroke-width: 1.5px;
+   stroke-dasharray: 200;
+   stroke-dashoffset: 200;
+   opacity: 0.2;
+   animation: steamAnimate 2.5s;
+   animation-delay: 3.3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes steamAnimate{
+	0%{
+		stroke-dashoffset: 200;
+	}
+
+	100%{
+		stroke-dashoffset: 0;
+	}
+}
+
+.center-block {
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+
+.text-center {
+  text-align:center
+}
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="../bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Dougal Problems</h1>
+      <div class="row">
+        <div class="col-md">
+          <svg version="1.1" viewBox="0 0 500 500" width="100%" height="401px" xml:space="preserve">
+          <style type="text/css">
+            .steam{stroke:#dbdbdb; fill: none; stroke-width: 2px;}
+            .cup{fill:#dbdbdb;stroke:#dbdbdb;stroke-width:2;stroke-miterlimit:10;}
+            .liquid{fill:#351F02;stroke:#351F02;stroke-miterlimit:10;}
+            .sleeve{fill:#821200;}
+            .lid{fill:#821200;stroke:#821200;stroke-width:2;stroke-miterlimit:10;}
+          </style>
+          <defs>
+          <mask id="liquidMasked">
+          <path fill="#FFF" d="M294.3,377.1c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c48.3,0,96.5,0,144.8,0 C309,257.2,301.7,316.3,294.3,377.1z"/
+          </mask>
+          </defs>
+          <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+          C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+          <g id="coffeeMasked" mask="url(#liquidMasked)">
+          <path class="liquid" d="M293.8,376.6c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c0,0,12-7.1,31.3-0.4
+          c29.8,10.3,32.7-0.2,48.7-0.2c27.4,0,29.2,8.8,44.7,1.3c14.7-7.1,20.2-0.7,20.2-0.7C308.5,256.7,301.2,315.8,293.8,376.6z"/>
+          </g>
+          <g class="steam">
+          <path d="M308.5,169c0,0-16.5-17-13-32.5s22-5.5,13.5,6c-7.9,10.6-23.8-6.9-12-21.8c11.5-14.5,10.7-22,10-24.8
+          c-5-18.4-18.6-5.8-12.6-1.1c9.4,7.1,15.2-16.5,13.2-24.5"/>
+          </g>
+          <path class="sleeve" d="M310.2,334.2c-44,5.4-88.4,5.4-132.4,0c-3.2-27.8-6.4-55.7-9.6-83.6c50.4,7.2,101.6,7.2,152,0
+          C316.9,278.4,313.5,306.3,310.2,334.2z"/>
+          <path class="lid" d="M337.2,187v13.8c0,0-15.8,3.7-92,3.7s-92-3.7-92-3.7V187c0-1.8,1.4-3.2,3.2-3.2h5.8v-11.5
+          c0-3.6,2.9-6.5,6.5-6.5h131.8l3.4,2.2c1.1,0.7,2.5,0.7,3.7,0l3.7-2.2h10.9c3.3,0,6.1,2.7,6.1,6.1v11.9h5.8
+          C335.8,183.8,337.2,185.2,337.2,187z"/>
+          <text x="48%" y="60%" alignment-baseline="middle" text-anchor="middle" class="counter">420</text>
+          </svg>
+          <h2>Studies Wasted</h2>
+        </div>
+        <div class="col-md">
+
+          <svg version="1.1" viewBox="0 0 500 500" width="100%" height="401px" xml:space="preserve">
+          <style type="text/css">
+            .sleeve2{fill:#008272;}
+            .lid2{fill:#008272;stroke:#008272;stroke-width:2;stroke-miterlimit:10;}
+          </style>
+          <defs>
+          <mask id="liquidMasked">
+          <path fill="#FFF" d="M294.3,377.1c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c48.3,0,96.5,0,144.8,0 C309,257.2,301.7,316.3,294.3,377.1z"/
+          </mask>
+          </defs>
+          <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+          C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+          <g id="coffeeMasked" mask="url(#liquidMasked)">
+          <path class="liquid" d="M293.8,376.6c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c0,0,12-7.1,31.3-0.4
+          c29.8,10.3,32.7-0.2,48.7-0.2c27.4,0,29.2,8.8,44.7,1.3c14.7-7.1,20.2-0.7,20.2-0.7C308.5,256.7,301.2,315.8,293.8,376.6z"/>
+          </g>
+          <g class="steam">
+          <path d="M308.5,169c0,0-16.5-17-13-32.5s22-5.5,13.5,6c-7.9,10.6-23.8-6.9-12-21.8c11.5-14.5,10.7-22,10-24.8
+          c-5-18.4-18.6-5.8-12.6-1.1c9.4,7.1,15.2-16.5,13.2-24.5"/>
+          </g>
+          <path class="sleeve2" d="M310.2,334.2c-44,5.4-88.4,5.4-132.4,0c-3.2-27.8-6.4-55.7-9.6-83.6c50.4,7.2,101.6,7.2,152,0
+          C316.9,278.4,313.5,306.3,310.2,334.2z"/>
+          <path class="lid2" d="M337.2,187v13.8c0,0-15.8,3.7-92,3.7s-92-3.7-92-3.7V187c0-1.8,1.4-3.2,3.2-3.2h5.8v-11.5
+          c0-3.6,2.9-6.5,6.5-6.5h131.8l3.4,2.2c1.1,0.7,2.5,0.7,3.7,0l3.7-2.2h10.9c3.3,0,6.1,2.7,6.1,6.1v11.9h5.8
+          C335.8,183.8,337.2,185.2,337.2,187z"/>
+          <text x="48.9%" y="60%" alignment-baseline="middle" text-anchor="middle" class="counter">3,421</text>
+          </svg>
+          <h2>Messages Ignored</h2>
+        </div>
+        <div class="col-md">
+          <svg version="1.1" viewBox="0 0 500 500" width="100%" height="401px" xml:space="preserve">
+          <style type="text/css">
+          	.sleeve3{fill:#780082;}
+          	.lid3{fill:#780082;stroke:#780082;stroke-width:2;stroke-miterlimit:10;}
+          </style>
+          <defs>
+          <mask id="liquidMasked">
+          <path fill="#FFF" d="M294.3,377.1c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c48.3,0,96.5,0,144.8,0 C309,257.2,301.7,316.3,294.3,377.1z"/
+          </mask>
+          </defs>
+          <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+          C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+          <g id="coffeeMasked" mask="url(#liquidMasked)">
+          <path class="liquid" d="M293.8,376.6c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c0,0,12-7.1,31.3-0.4
+          c29.8,10.3,32.7-0.2,48.7-0.2c27.4,0,29.2,8.8,44.7,1.3c14.7-7.1,20.2-0.7,20.2-0.7C308.5,256.7,301.2,315.8,293.8,376.6z"/>
+          </g>
+          <g class="steam">
+          <path d="M308.5,169c0,0-16.5-17-13-32.5s22-5.5,13.5,6c-7.9,10.6-23.8-6.9-12-21.8c11.5-14.5,10.7-22,10-24.8
+          c-5-18.4-18.6-5.8-12.6-1.1c9.4,7.1,15.2-16.5,13.2-24.5"/>
+          </g>
+          <path class="sleeve3" d="M310.2,334.2c-44,5.4-88.4,5.4-132.4,0c-3.2-27.8-6.4-55.7-9.6-83.6c50.4,7.2,101.6,7.2,152,0
+          C316.9,278.4,313.5,306.3,310.2,334.2z"/>
+          <path class="lid3" d="M337.2,187v13.8c0,0-15.8,3.7-92,3.7s-92-3.7-92-3.7V187c0-1.8,1.4-3.2,3.2-3.2h5.8v-11.5
+          c0-3.6,2.9-6.5,6.5-6.5h131.8l3.4,2.2c1.1,0.7,2.5,0.7,3.7,0l3.7-2.2h10.9c3.3,0,6.1,2.7,6.1,6.1v11.9h5.8
+          C335.8,183.8,337.2,185.2,337.2,187z"/>
+          <text x="48%" y="60%" alignment-baseline="middle" text-anchor="middle" class="counter">1</text>
+          </svg>
+          <h2>Streaks Lost</h2>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap4/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+        $('.counter').counterUp({
+            delay: 100,
+            time: 2000
+        });
+    });
+    </script>
+  </body>
+  <footer>
+    <p>Coffee Cups By <a href="https://codepen.io/aliceuhl/">Alice Uhl</a><br/>Made with ♡ by <a href="https://jameslewis.com.au">James Lewis</a></p>
+  </footer>
+</html>
