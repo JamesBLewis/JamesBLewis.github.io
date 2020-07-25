@@ -1,3 +1,4 @@
+console.log("v2")
 const mainText = document.getElementsByClassName("magic-text");
 const fact = " Say... wanna hear a random fact? ";
 const factsHandler = () => {
@@ -21,9 +22,9 @@ const startPrint = ( target, text, speed) => {
         target.innerHTML += text[0];
         window.scrollTo(0,document.body.scrollHeight);
         text = text.substring(1);
+        currentSentenceEnd = target.innerHTML.length;
         if (text.length < 1) {
             clearInterval(timer);
-            currentSentenceEnd = target.innerHTML.length;
         }
     };
     const timer=setInterval(printText, speed)
@@ -38,7 +39,6 @@ const DisplaycrazyText  = (text, speed, target, factsHandler) => {
             // she said yes :)
             displayedText = `. Ha! I was hoping you'd say yes 😅.${factsHandler()}`;
             startPrint(target, displayedText, 70);
-            currentSentenceEnd = target.innerHTML.length
         }
     }, false);
     startPrint(target, text, 60);
